@@ -14,7 +14,7 @@ public class UniversalBotLogic extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        // TODO
+        // TODO поменять эту логику считывания файла
         try(FileReader reader = new FileReader("note.txt"))
         {
             int c;
