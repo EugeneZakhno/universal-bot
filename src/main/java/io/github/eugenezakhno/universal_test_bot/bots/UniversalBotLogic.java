@@ -17,7 +17,7 @@ public class UniversalBotLogic extends TelegramLongPollingBot {
     public String getBotUsername() {
         String line;
         // TODO поменять эту логику считывания файла
-        try (BufferedReader reader = new BufferedReader(new FileReader("./universal_test_bot/src/main/resources/files/config-bot.json"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("./universal_test_bot/src/main/resources/files/P2PCHELINDBANKB118876F775EED2A7C.json"))) {
             while ((line = reader.readLine()) != null) {
                 if (line==true) {
 
