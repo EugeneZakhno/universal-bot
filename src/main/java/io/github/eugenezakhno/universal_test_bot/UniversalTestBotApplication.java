@@ -11,7 +11,7 @@ public class UniversalTestBotApplication {
 		SpringApplication.run(UniversalTestBotApplication.class, args);
 		GsonParser parser = new GsonParser();
 		Bot bot = parser.parse();
-		System.out.println("Bot " + bot.toString());
+		System.out.println(bot.toString());
 /*		try {
 			TelegramBotsApi botsApi;
 			//TODO DefaultBotSession - ?
