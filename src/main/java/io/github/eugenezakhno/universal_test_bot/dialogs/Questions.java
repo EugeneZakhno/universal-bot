@@ -1,4 +1,4 @@
-package io.github.eugenezakhno.universal_test_bot.model;
+package io.github.eugenezakhno.universal_test_bot.dialogs;
 
 public class Questions {
 

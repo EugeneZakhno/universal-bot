@@ -1,14 +1,5 @@
 package io.github.eugenezakhno.universal_test_bot.bots;
 
-import com.google.gson.Gson;
-import io.github.eugenezakhno.universal_test_bot.model.Bot;
-import org.telegram.telegrambots.api.objects.Update;
-import org.telegram.telegrambots.bots.TelegramLongPollingBot;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
 public class UniversalBotLogic {
 
  /*   @Override

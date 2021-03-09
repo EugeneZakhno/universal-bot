@@ -1,6 +1,7 @@
 package io.github.eugenezakhno.universal_test_bot;
 
 import io.github.eugenezakhno.universal_test_bot.model.Bot;
+import io.github.eugenezakhno.universal_test_bot.model.TelegramBot;
 import io.github.eugenezakhno.universal_test_bot.parsers.GsonParser;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
