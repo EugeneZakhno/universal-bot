@@ -8,7 +8,6 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class GsonParser {
-    String line;
     public Bot parse(){
         Gson gson = new Gson();
         try (BufferedReader reader = new BufferedReader(new FileReader("P2PCHELINDBANKB118876F775EED2A7C.json"))) {

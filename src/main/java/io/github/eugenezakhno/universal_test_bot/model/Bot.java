@@ -1,52 +1,61 @@
 package io.github.eugenezakhno.universal_test_bot.model;
 
-import com.google.gson.annotations.SerializedName;
-import java.util.Objects;
+import java.util.HashMap;
 
 public class Bot {
-    @SerializedName("botName")
-    private String botName;
-    private String botToken;
 
-    public Bot(String botName, String botToken) {
-        this.botName = botName;
-        this.botToken = botToken;
+    private Messenger telegramBot;
+    private Messenger whatsappBot;
+    private Messenger viberBot;
+    private Messenger facebookBot;
+    private Messenger skypeBot;
+    private HashMap<Questions,Answers> dialogsTemplates;
+
+    public Messenger getTelegramBot() {
+        return telegramBot;
     }
 
-     public String getBotName() {
-        return botName;
+    public void setTelegramBot(Messenger telegramBot) {
+        this.telegramBot = telegramBot;
     }
 
-    public void setBotName(String botName) {
-        this.botName = botName;
+    public Messenger getWhatsappBot() {
+        return whatsappBot;
     }
 
-    public String getBotToken() {
-        return botToken;
+    public void setWhatsappBot(Messenger whatsappBot) {
+        this.whatsappBot = whatsappBot;
     }
 
-    public void setBotToken(String botToken) {
-        this.botToken = botToken;
+    public Messenger getViberBot() {
+        return viberBot;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Bot bot = (Bot) o;
-        return Objects.equals(botName, bot.botName) &&
-                Objects.equals(botToken, bot.botToken);
+    public void setViberBot(Messenger viberBot) {
+        this.viberBot = viberBot;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(botName, botToken);
+    public Messenger getFacebookBot() {
+        return facebookBot;
     }
 
-    @Override
-    public String toString() {
-        return "Bot: " +
-                "botName='" + getBotName() + '\'' +
-                ", botToken='" + getBotToken() + '\'';
+    public void setFacebookBot(Messenger facebookBot) {
+        this.facebookBot = facebookBot;
+    }
+
+    public Messenger getSkypeBot() {
+        return skypeBot;
+    }
+
+    public void setSkypeBot(Messenger skypeBot) {
+        this.skypeBot = skypeBot;
+    }
+
+    public HashMap<Questions, Answers> getDialogsTemplates() {
+        return dialogsTemplates;
+    }
+
+    public void setDialogsTemplates(HashMap<Questions, Answers> dialogsTemplates) {
+        this.dialogsTemplates = dialogsTemplates;
     }
 }
