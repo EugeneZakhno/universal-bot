@@ -36,6 +36,6 @@ public class Bot {
     public String toString() {
         return "Bot: " +
                 "botName='" + getBotName() + '\'' +
-                ", botToken='" + getBotToken();
+                ", botToken='" + getBotToken() +" , telegramBot " + telegramBot;
     }
 }

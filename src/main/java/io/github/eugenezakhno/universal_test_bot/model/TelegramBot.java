@@ -18,5 +18,10 @@ public class TelegramBot {
         this.availableTransfers = availableTransfers;
     }
 
-
+    @Override
+    public String toString() {
+        return "TelegramBot{" +
+                "availableTransfers=" + availableTransfers +
+                '}';
+    }
 }
