@@ -8,36 +8,31 @@ import org.telegram.telegrambots.exceptions.TelegramApiException;
 
 public class UniversalBotLogic extends TelegramLongPollingBot {
 
-    TelegramBot telegramBot;
-
-   @Override
+    TelegramBot telegramBot = new TelegramBot();
     public void onUpdateReceived(Update update) {
-       if (update.hasMessage() && update.getMessage().hasText()) {
-           SendMessage message = new SendMessage() // Create a SendMessage object with mandatory fields
-                   .setChatId(update.getMessage().getChatId())
-                   .setText(update.getMessage().getText());
-           try {
-               execute(message); // Call method to send the message
-           } catch (TelegramApiException e) {
-               e.printStackTrace();
-           }
-       }
+        update.getUpdateId();
+
+        String chat_id = String.valueOf(update.getMessage().getChatId());
+        SendMessage sendMessage = new SendMessage().setChatId(chat_id);
+
+        if(update.getMessage().getText().equals("Привет")){
+            sendMessage.setText("Привет дружище");
+            try {
+                execute(sendMessage);
+            } catch (TelegramApiException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
-    private void execute(SendMessage message) {
-    }
-
-    @Override
+    @
     public String getBotUsername() {
-            return telegramBot.getBotName() ;
-
+        return telegramBot.getBotName();
     }
 
-    @Override
     public String getBotToken() {
-        return telegramBot.getBotToken();
+        return getBotToken();
     }
-
-
 }
 

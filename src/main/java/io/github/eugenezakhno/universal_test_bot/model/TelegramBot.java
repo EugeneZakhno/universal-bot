@@ -1,5 +1,6 @@
 package io.github.eugenezakhno.universal_test_bot.model;
 
+import io.github.eugenezakhno.universal_test_bot.bots.UniversalBotLogic;
 import io.github.eugenezakhno.universal_test_bot.dialogs.Answers;
 import io.github.eugenezakhno.universal_test_bot.dialogs.Questions;
 

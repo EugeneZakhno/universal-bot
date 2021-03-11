@@ -12,7 +12,6 @@ public class Bot {
         this.telegramBot = telegramBot;
     }
 
-
     @Override
     public String toString() {
         return  "TelegramBot"  + getTelegramBot();
