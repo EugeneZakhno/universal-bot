@@ -6,6 +6,8 @@ import io.github.eugenezakhno.universal_test_bot.parsers.GsonParser;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.telegram.telegrambots.ApiContextInitializer;
+import org.telegram.telegrambots.meta.TelegramBotsApi;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
 
 @SpringBootApplication
 public class UniversalTestBotApplication {
@@ -17,7 +19,11 @@ public class UniversalTestBotApplication {
 		System.out.println(bot.toString());
 
 		ApiContextInitializer.init();
-		UniversalBotLogic universalBotLogic = new UniversalBotLogic();
-		universalBotLogic.botConnect();
+		TelegramBotsApi telegram = new TelegramBotsApi();
+		try {
+			telegram.registerBot(new UniversalBotLogic());
+		} catch (TelegramApiRequestException e) {
+			e.printStackTrace();
+		}
 	}
 }
