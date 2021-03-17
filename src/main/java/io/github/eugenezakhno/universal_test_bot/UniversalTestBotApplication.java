@@ -19,11 +19,6 @@ public class UniversalTestBotApplication {
 		System.out.println(bot.toString());
 
 		ApiContextInitializer.init();
-		TelegramBotsApi telegram = new TelegramBotsApi();
-		try {
-			telegram.registerBot(new UniversalBotLogic());
-		} catch (TelegramApiRequestException e) {
-			e.printStackTrace();
-		}
+		SpringApplication.run(UniversalTestBotApplication.class, args);
 	}
 }
