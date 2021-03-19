@@ -15,7 +15,7 @@ public class UniversalTestBotApplication {
 
 		GsonParser parser = new GsonParser();
 		Bot bot = parser.parse();
-		System.out.println(bot.toString());
+		//System.out.println(bot.toString());
 
 		ApiContextInitializer.init();
 		SpringApplication.run(UniversalTestBotApplication.class, args);
