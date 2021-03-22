@@ -14,6 +14,6 @@ public class Bot {
 
     @Override
     public String toString() {
-        return  "TelegramBot"  + getTelegramBot();
+        return  "TelegramBot "  + getTelegramBot();
     }
 }

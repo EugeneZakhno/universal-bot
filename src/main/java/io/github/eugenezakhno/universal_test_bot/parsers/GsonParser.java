@@ -17,7 +17,7 @@ public class GsonParser {
             Bot bot = gson.fromJson(reader, Bot.class);
                 return bot;
             } catch(IOException e){
-                System.err.println("Parsing JSON error" + e.toString());
+                System.err.println("Parsing JSON error " + e.toString());
             }
         return null;
 
