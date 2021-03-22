@@ -3,7 +3,7 @@ package io.github.eugenezakhno.universal_test_bot.parsers;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import io.github.eugenezakhno.universal_test_bot.model.Bot;
-import io.github.eugenezakhno.universal_test_bot.model.TelegramBot;
+
 
 import java.io.BufferedReader;
 import java.io.FileReader;
