@@ -12,10 +12,9 @@ public class GsonParser {
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
         try (BufferedReader reader = new BufferedReader(new FileReader("P2PCHELINDBANKB118876F775EED2A7C.json"))) {
-            Bot bot = gson.fromJson(reader, Bot.class);
-                return bot;
+            return gson.fromJson(reader, Bot.class);
             } catch(IOException e){
-                System.err.println(" Parsin g JSON error " + e.toString());
+                System.err.println(" Parsing JSON error " + e.toString());
             }
         return null;
 
