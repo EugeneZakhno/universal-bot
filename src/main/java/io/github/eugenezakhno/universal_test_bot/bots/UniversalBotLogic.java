@@ -17,7 +17,7 @@ public class UniversalBotLogic extends TelegramLongPollingBot {
         String chat_id = String.valueOf(update.getMessage().getChatId());
         SendMessage sendMessage = new SendMessage().setChatId(chat_id);
 
-        if(update.getMessage().getText().equals("Привет")){
+        if(update.getMessage().getText().equals("Привет, как дела")){
             sendMessage.setText("Привет дружище, как дела?!");
             try {
                 execute(sendMessage);
